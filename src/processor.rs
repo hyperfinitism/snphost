@@ -36,7 +36,7 @@ impl ProcessorGeneration {
     //
     // Compare these values with the models and families of known processor generations to
     // determine which generation the current processor is a part of.
-    pub(crate) fn current() -> Result<Self> {
+    pub(crate) unsafe fn current() -> Result<Self> {
         let cpuid = unsafe { x86_64::__cpuid(0x8000_0001) };
 
         // Bits 31:28 are used to differentiate between Bergamo and Siena machines.

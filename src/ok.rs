@@ -96,7 +96,7 @@ impl fmt::Display for SevStatusTests {
     }
 }
 
-fn collect_tests() -> Vec<Test> {
+unsafe fn collect_tests() -> Vec<Test> {
     let tests = vec![
         Test {
             name: "AMD CPU",
